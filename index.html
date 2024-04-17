@@ -7,8 +7,8 @@
     html { background: #fff; }
 
     body {
-      position: relative; /* Set position to relative */
-      min-height: 100vh; /* Set minimum height to full viewport height */
+      position: relative;
+      min-height: 100vh;
       padding-top: 15%;
       text-align: center;
     }
@@ -25,11 +25,16 @@
     }
 
     .bottom-text {
-      position: absolute; /* Position absolute */
-      bottom: 10px; /* 10px from the bottom */
-      left: 50%; /* Center horizontally */
-      transform: translateX(-50%); /* Center horizontally */
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
       font-size: 20px;
+    }
+
+    .counter {
+      font-size: 24px;
+      margin-top: 20px;
     }
   </style>
 </head>
@@ -38,6 +43,20 @@
 <img class="pie" src="slice.jpg" alt="Runny slice of apple pie topped with a large scoop of vanilla ice cream">
 
 <div class="bottom-text">hi pyx</div>
+
+<div class="counter">0</div>
+
+<script>
+  const counter = document.querySelector('.counter');
+  let count = 0;
+
+  function updateCounter() {
+    count++;
+    counter.textContent = count;
+  }
+
+  setInterval(updateCounter, 1000);
+</script>
 
 </body>
 </html>
