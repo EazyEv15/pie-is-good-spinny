@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>pie is good</title>
+  <style>
+    html { background: #fff; }
+
+    body {
+      position: relative; /* Set position to relative */
+      min-height: 100vh; /* Set minimum height to full viewport height */
+      padding-top: 15%;
+      text-align: center;
+    }
+
+    .pie {
+      height: 264px;
+      width: 506px;
+      animation: spin 4s linear infinite;
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .bottom-text {
+      position: absolute; /* Position absolute */
+      bottom: 10px; /* 10px from the bottom */
+      left: 50%; /* Center horizontally */
+      transform: translateX(-50%); /* Center horizontally */
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<img class="pie" src="images/slice.jpg" alt="Runny slice of apple pie topped with a large scoop of vanilla ice cream">
+
+<div class="bottom-text">hi pyx</div>
+
+</body>
+</html>
